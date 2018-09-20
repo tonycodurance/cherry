@@ -3,6 +3,7 @@ const Layout = ({ body, title }) => `
   <html>
     <head>
       <title>${title}</title>
+      <link href="../../dist/styles/output.css"
     </head>
     <body>
       <div id="app">${body}</div>

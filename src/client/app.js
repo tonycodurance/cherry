@@ -1,12 +1,25 @@
 import React from 'react';
 import UserDetails from './userDetails'
 
-const App = () => (
-  <div>
-    <div>Header</div>
-    <UserDetails>test</UserDetails>
-    <div>Footer</div>
-  </div>
-)
+class App extends React.Component {
+  constructor() {
+    super();
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  render() {
+    return (
+      <div>
+        <div>Header</div>
+        <UserDetails handleSubmit={this.handleSubmit}>test</UserDetails>
+        <div>Footer</div>
+      </div>
+    )
+  }
+
+  handleSubmit() {
+    console.log('lol');
+  }
+}
 
 export default App
